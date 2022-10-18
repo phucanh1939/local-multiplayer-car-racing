@@ -720,6 +720,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1185840221}
     m_Modifications:
+    - target: {fileID: 4501774009886104589, guid: 704f0747c19bee5408b578fb92da35af, type: 3}
+      propertyPath: m_NormalizedViewPortRect.x
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 4501774010449191714, guid: 704f0747c19bee5408b578fb92da35af, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -771,6 +775,18 @@ PrefabInstance:
     - target: {fileID: 4501774010449460852, guid: 704f0747c19bee5408b578fb92da35af, type: 3}
       propertyPath: m_TagString
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 4501774010449545632, guid: 704f0747c19bee5408b578fb92da35af, type: 3}
+      propertyPath: _id
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4501774010449545632, guid: 704f0747c19bee5408b578fb92da35af, type: 3}
+      propertyPath: _cameraSwitchKey
+      value: 303
+      objectReference: {fileID: 0}
+    - target: {fileID: 5756448730457729462, guid: 704f0747c19bee5408b578fb92da35af, type: 3}
+      propertyPath: m_NormalizedViewPortRect.x
+      value: 0.5
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 4501774009886104594, guid: 704f0747c19bee5408b578fb92da35af, type: 3}
