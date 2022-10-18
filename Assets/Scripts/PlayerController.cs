@@ -6,6 +6,8 @@ public class PlayerController : MonoBehaviour
     private float _verticalInput;
     private Transform _transform;
 
+    [SerializeField] private float _id = 1;
+
     [Header("Movement")]
     [SerializeField] private float _speed = 5.0f;
     [SerializeField] private float _turnSpeed = 5.0f;
@@ -36,8 +38,8 @@ public class PlayerController : MonoBehaviour
 
     private void UpdateMovementInput()
     {
-        _horizontalInput = Input.GetAxis("Horizontal");
-        _verticalInput = Input.GetAxis("Vertical");
+        _horizontalInput = Input.GetAxis("Horizontal_" + _id);
+        _verticalInput = Input.GetAxis("Vertical_" + _id);
     }
 
     private void UpdateCameras()
