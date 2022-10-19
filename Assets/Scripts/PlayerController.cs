@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
@@ -5,6 +6,7 @@ public class PlayerController : MonoBehaviour
     private float _horizontalInput;
     private float _verticalInput;
     private Transform _transform;
+    private Rigidbody _rigidbody;
 
     [SerializeField] private float _id = 1;
 
@@ -20,6 +22,7 @@ public class PlayerController : MonoBehaviour
     private void Awake()
     {
         _transform = transform;
+        _rigidbody = GetComponent<Rigidbody>();
         _frontCamera.enabled = false;
         _backCamera.enabled = true;
     }
@@ -34,6 +37,14 @@ public class PlayerController : MonoBehaviour
     {
         _transform.Rotate(Vector3.up, _turnSpeed * Time.fixedDeltaTime * _horizontalInput);
         _transform.Translate(_speed * Time.fixedDeltaTime * _verticalInput * Vector3.forward);
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        // if (collision.gameObject.CompareTag("Wall"))
+        // {
+        //     _rigidbody.velocity = Vector3.zero;
+        // }
     }
 
     private void UpdateMovementInput()
