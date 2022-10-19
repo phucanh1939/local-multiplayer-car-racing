@@ -950,9 +950,10 @@ GameObject:
   - component: {fileID: 1127211990644042506}
   - component: {fileID: 694338188123623819}
   - component: {fileID: 689361673}
+  - component: {fileID: 5749566920882158309}
   m_Layer: 0
   m_Name: Car
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1039,6 +1040,19 @@ MonoBehaviour:
   _frontCamera: {fileID: 8578716361855988348}
   _backCamera: {fileID: 8578716361644369927}
   _switchKey: 304
+--- !u!114 &5749566920882158309
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8578716362611787687}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c6be346899445c29eb7e822ed647d78, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _eventPlayerReachCheckpoint: {fileID: 11400000, guid: b145d028ebe73ec44a421fd5b10fef43, type: 2}
 --- !u!1 &8939662350862746499
 GameObject:
   m_ObjectHideFlags: 0

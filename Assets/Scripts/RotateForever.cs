@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class RotateForever : MonoBehaviour
@@ -8,7 +6,7 @@ public class RotateForever : MonoBehaviour
     [SerializeField] private Vector3 _axis;
 
     // Update is called once per frame
-    void Update()
+    private void Update()
     {
         transform.Rotate(_axis, _speed * Time.deltaTime);
     }
