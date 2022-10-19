@@ -1019,7 +1019,7 @@ MonoBehaviour:
     motor: 0
     steering: 0
   _maxMotorTorque: 1000
-  _maxSteeringAngle: 30
+  _maxSteeringAngle: 10
   _brakeTorque: 500
   _decelerationForce: 250
   _brakeKey: 32

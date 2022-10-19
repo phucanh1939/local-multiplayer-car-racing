@@ -5,10 +5,10 @@ public class CarController : MonoBehaviour
 {
     [SerializeField] private int _id;
     [SerializeField] private List<AxleInfo> _axleInfos;
-    [SerializeField] private float _maxMotorTorque = 30;
-    [SerializeField] private float _maxSteeringAngle = 50;
-    [SerializeField] private float _brakeTorque = 15;
-    [SerializeField] private float _decelerationForce = 15;
+    [SerializeField] private float _maxMotorTorque = 1000;
+    [SerializeField] private float _maxSteeringAngle = 15;
+    [SerializeField] private float _brakeTorque = 500;
+    [SerializeField] private float _decelerationForce = 250;
     [SerializeField] private KeyCode _brakeKey = KeyCode.Space;
     [SerializeField] private Vector3 _centerOfMass;
 
