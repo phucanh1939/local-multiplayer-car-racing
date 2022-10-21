@@ -1,4 +1,6 @@
+using System;
 using GG.Events;
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -7,8 +9,17 @@ using UnityEngine.SceneManagement;
 /// </summary>
 public class GameManager : MonoBehaviour
 {
-    [Header("Listen to Events")] [SerializeField]
-    private StringEventChannelSO _eventPlayerReachCheckpoint;
+    [Header("Listen to Events")]
+    [SerializeField] private StringEventChannelSO _eventPlayerReachCheckpoint;
+
+    [Header("UI")]
+    [SerializeField] private GameObject _popupEndGame;
+    [SerializeField] private TextMeshProUGUI _textEndGame;
+
+    private void Start()
+    {
+        HidePopupEndGame();
+    }
 
     private void OnEnable()
     {
@@ -26,10 +37,26 @@ public class GameManager : MonoBehaviour
         EndGame(playerTag);
     }
 
+    // ReSharper disable once UnusedMember.Global
+    /// <summary>
+    /// Callback when user press play again button
+    /// </summary>
+    public void OnButtonPlayAgainPressed()
+    {
+        HidePopupEndGame();
+        ResumeGame();
+        RestartGame();
+    }
+
+    private void HidePopupEndGame()
+    {
+        _popupEndGame.SetActive(false);
+    }
+
     private void ShowPopupEndGame(string winnerName)
     {
-        // TODO
-        Invoke(nameof(RestartGame), 1.0f);
+        _textEndGame.text = winnerName + " Won!";
+        _popupEndGame.SetActive(true);
     }
 
     public void PauseGame() => Time.timeScale = 0;
