@@ -1019,8 +1019,8 @@ MonoBehaviour:
     rightWheelMesh: {fileID: 8578716361759216371}
     motor: 0
     steering: 0
-  _maxMotorTorque: 1000
-  _maxSteeringAngle: 10
+  _motorPower: 500
+  _steerPower: 10
   _brakeTorque: 500
   _decelerationForce: 250
   _brakeKey: 32

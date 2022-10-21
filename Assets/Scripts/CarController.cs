@@ -1,14 +1,16 @@
 using System.Collections.Generic;
+using System.ComponentModel;
 using UnityEngine;
 
 public class CarController : MonoBehaviour
 {
     [SerializeField] private int _id;
     [SerializeField] private List<AxleInfo> _axleInfos;
-    [SerializeField] private float _maxMotorTorque = 1000;
-    [SerializeField] private float _maxSteeringAngle = 15;
-    [SerializeField] private float _brakeTorque = 500;
-    [SerializeField] private float _decelerationForce = 250;
+    [Description("Total motor power")]
+    [SerializeField] private float _motorPower = 400;
+    [SerializeField] private float _steerPower = 10;
+    [SerializeField] private float _brakeTorque = 200;
+    [SerializeField] private float _decelerationForce = 100;
     [SerializeField] private KeyCode _brakeKey = KeyCode.Space;
     [SerializeField] private Vector3 _centerOfMass;
 
@@ -40,8 +42,8 @@ public class CarController : MonoBehaviour
 
     private void UpdateWheels()
     {
-        var motorTorque = _maxMotorTorque * _verticalInput;
-        var steerAngle = _maxSteeringAngle * _horizontalInput;
+        var motorTorque = _motorPower * _verticalInput;
+        var steerAngle = _steerPower * _horizontalInput;
         foreach (var axle in _axleInfos)
         {
             UpdateAxle(axle, motorTorque, steerAngle);
